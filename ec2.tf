@@ -2,7 +2,7 @@ module "ec2_instance" {
   source  = "terraform-aws-modules/ec2-instance/aws"
   version = "~> 3.0"
 
-  name = "jenkins-server"
+  name = "jenkins-serve"
   user_data = base64encode(file("${path.module}/jenkins.sh"))  
   ami                    = "ami-06a0cd9728546d178"
   instance_type          = "t2.micro"
